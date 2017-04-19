@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Personal info</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div id="page-wrapper">
+		<div class="container-fluid">
+			<div>
+				<div>
+					<form action="javascript: void(null);" role="form" id="form">
+						<input type="hidden" value="" id="PersonId" name="PersonId">
+						<input type="hidden" value="" id="Sex" name="gender">
+						<div class="form-group col-md-3">
+							<label for="">Имя</label>
+							<input type="text" class="form-control" id="f_name" name="name">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Фамилия</label>
+							<input type="text" class="form-control" id="m_name" name="surname">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Отчество</label>
+							<input type="text" class="form-control" id="surname" name="patername">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Дата роджения</label>
+							<input type="text" class="datepicker form-control" id="date_birthday" name="birthday">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="appoinment">Должность</label>
+							<select class="select-option form-control" id="appoinment" name="appoinment">
+								
+							</select> 
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="" name="own_app">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="workplace">Место работы</label>
+							<select class="select-option form-control" id="workplace" name="workplace">
+								
+							</select>
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="Называние,Город,Область" name="own_place">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Паспорт: серия</label>
+							<input type="text" class="form-control" id="passport_series" name="passport_series">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Паспорт: номер</label>
+							<input type="text" class="form-control" id="passport_number" name="passport_number">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Личный номер</label>
+							<input type="text" class="form-control" id="personal_number" name="personal_number">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Годен до:</label>
+							<input type="text" class="datepicker form-control" id="date_issue" name="date_issue">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Кем выдан:</label>
+							<input type="text" class="form-control" id="Autority" name="authority">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Место регистрации:</label>
+							<input type="text" class="form-control" id="Registration_place" name="registration_place">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Адрес регистрации:</label>
+							<input type="text" class="form-control" id="Registration_adress" name="registration_address">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="sex">Пол:</label>
+							<select class="select-option form-control" id="sex" name="sex">
+								
+							</select>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="nationality">Национальность</label>
+							<select class="select-option form-control" id="nationality" name="nationality">
+								
+							</select>
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="" name="own_nationality">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="nationality">Телефон для связи:</label>
+							<input type="text" class="form-control" placeholder="" name="tel_number" id="tel_number">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Дата заселения</label>
+							<input type="text" class="datepicker form-control" id="date_start" name="date_start">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Дата выселения</label>
+							<input type="text" class="datepicker form-control" id="date_finish" name="date_finish">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="submit" class="btn btn-block btn-success" value="Сохранить">
+						</div>
+						<div class="form-group col-md-6">
+							<a id="removeBtn" href="" class="btn btn-block btn-danger">Выселить</a>
+						</div>
+					</form>
+					<div class="alert alert-success" id="success-message">
+						Информация сохранена
+					</div>
+					<div class="alert alert-danger" id="error-message">
+						Ошибка записи
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="jquery/dist/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/PersonInfoFormWithRemove.js"></script>
+	<script type="text/javascript" src="js/validationVisitor.js"></script>
+	<style type="text/css">
+		.input-group{
+			display: none;
+		}
+        #success-message,
+        #error-message{
+        	display: none;
+        }
+	</style>
+	
+</body>
+</html>

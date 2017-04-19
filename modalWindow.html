@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modal Window</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div id="page-wrapper">
+		<div class="container-fluid">
+			<div>
+				<div>
+ 
+					<div class="ui-widget">
+					  <div class="form-group col-md-12">
+							<input type="text" class="form-control" id="autocompleteVisitors" name="alreadyVisitor">
+						</div>
+					</div>
+					<form action="javascript:void(null);" role="form" id="form">
+						<input type="hidden" value="" id="placeId" name="placeId">
+						<div class="form-group col-md-3">
+							<label for="">Имя</label>
+							<input type="text" class="form-control" id="name" name="name" value="Кирилл">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Фамилия</label>
+							<input type="text" class="form-control" id="surname" name="surname" value="Товпинец">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Отчество</label>
+							<input type="text" class="form-control" id="patername" name="patername" value="Александрович">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Дата роджения</label>
+							<input type="text" class="datepicker form-control" id="birthday" name="birthday" value="1994-02-10">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="appoinment">Должность</label>
+							<select class="select-option form-control" id="appoinment" name="appoinment">
+								
+							</select> 
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="" name="own_app">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="workplace">Место работы</label>
+							<select class="select-option form-control" id="workplace" name="workplace">
+								
+							</select>
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="Называние,Город,Область" name="own_place">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Паспорт: серия</label>
+							<input type="text" class="form-control" id="passport-series" name="passport_series" value="BM">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Паспорт: номер</label>
+							<input type="text" class="form-control" id="passport-number" name="passport_number" value="1770368">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Личный номер</label>
+							<input type="text" class="form-control" id="personal-number" name="personal_number" value="3100294E006PB9">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Годен до:</label>
+							<input type="text" class="datepicker form-control" id="date-issue" name="date_issue" value="2019-02-10">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Кем выдан:</label>
+							<input type="text" class="form-control" id="authority" name="authority" value="Новолукомльское ГОМ">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Место регистрации:</label>
+							<input type="text" class="form-control" id="registration-place" name="registration_place" value="Минск">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Адрес регистрации:</label>
+							<input type="text" class="form-control" id="registration-address" name="registration_address" value="Пр-т Пушкина">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="sex">Пол:</label>
+							<select class="select-option form-control" id="sex" name="sex">
+								
+							</select>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="nationality">Национальность</label>
+							<select class="select-option form-control" id="nationality" name="nationality">
+								
+							</select>
+							<div class="form-group input-group">
+                                <input type="text" class="form-control" placeholder="" name="own_nationality">
+                            </div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="nationality">Телефон для связи:</label>
+							<input type="text" class="form-control" placeholder="" name="mobile" value="+375298537596">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Дата заселения</label>
+							<input type="text" class="datepicker form-control" id="date-start" name="date_start" value="2017-03-10">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Дата выселения</label>
+							<input type="text" class="datepicker form-control" id="date-finish" name="date_finish" value="2017-04-12">
+						</div>
+						<div class="form-group col-md-12">
+							<input type="submit" class="btn btn-block btn-success" value="Заселить">
+						</div>
+					</form>
+					<div class="col-lg-12" id="success-message">
+						<div class="alert alert-success">
+							Человек заселён на данное место!
+						</div>
+						</div>
+						<div class="col-lg-12" id="error-message">
+							<div class="alert alert-danger">
+								Здесь нельзя поселить этого человека
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="jquery/dist/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+	<style type="text/css">
+		.input-group{
+			display: none;
+		}
+        #success-message,
+        #error-message{
+        	display: none;
+        }
+	</style>
+	
+</body>
+</html>
