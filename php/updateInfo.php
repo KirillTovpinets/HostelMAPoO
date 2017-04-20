@@ -12,7 +12,7 @@
 
 	$appId = 0;
 	if ($own_app != "") {
-		$mysql->query("INSERT INTO appointment(title) VALUES ($own_app) ") or die("Ошибка выполнения запроса: " . mysqli_error($mysql));
+		$mysql->query("INSERT INTO appointment(title) VALUES ('$own_app') ") or die("Ошибка выполнения запроса: " . mysqli_error($mysql));
 		$result = $mysql->query("SELECT MAX(id) AS LastApp FROM appointment") or die ("Ошибка выполнения запроса: " . mysqli_error($mysql));
 		$obj = $result->fetch_assoc();
 		$appId = $obj["LastApp"];
@@ -45,6 +45,7 @@
 		$result = $mysql->query("SELECT MAX(id) AS Own_job FROM work_place") or die ("Ошибка выполнения запроса: " . mysqli_error($mysql));
 		$obj = $result->fetch_assoc();
 		$workId = $obj["Own_job"];
+		echo $workId;
 	}else{
 		$result = $mysql->query("SELECT id FROM work_place WHERE id = $workplace") or die ("Ошибка выполнения запроса: " . mysqli_error($mysql));
 		$Workplace = $result->fetch_assoc();

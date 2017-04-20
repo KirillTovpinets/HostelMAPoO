@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$(".select-option").change(function(){
+		if(this.value == 'self'){
+			$(this).siblings(".input-group").css("display", "block");
+			$(this).css("display", "none");	
+		}
+	});
 	$("#form").validate({
 		rules: {
 			name: "required",
