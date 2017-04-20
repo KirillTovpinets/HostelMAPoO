@@ -25,7 +25,7 @@ $(document).ready(function(){
 	                if (value.length != 0 ) {
 	                	var tablecontainerMore = $("<div></div>");
 		                tablecontainerMore.addClass("table-responsive");
-		                tablecontainerMore.attr("id", "Info-" + numrows++);
+		                tablecontainerMore.attr("id", "Info-" + numrows);
 
 		                var tableInfo = $("<table></table>");
 		                tableInfo.addClass("table table-bordered table-hover table-striped");
@@ -79,6 +79,7 @@ $(document).ready(function(){
 	                	tablecontainerMore.append(tableInfo);
 	                	$("#container").append(tablecontainerMore);
 	                }
+	                numrows++;
 	            });
 	            $("[data-fancybox]").fancybox({
 	                    buttons: false,

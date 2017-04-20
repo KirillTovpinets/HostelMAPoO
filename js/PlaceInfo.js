@@ -193,6 +193,8 @@ $(document).ready(function(){
                             var NestRow = $("<div class='row'></div>");
                             if(q == 1){
                                 var paragr = $("<p></p>");
+                                paragr.html(numBlockId);
+                                paragr.css("text-align", "center");
                                 NestRow.append(paragr);
                             }else{
                                 if (q == 0 ) {
@@ -226,7 +228,7 @@ $(document).ready(function(){
 
                 var rowTunel = this.getTunel(numBlock, table);
                 container.append(rows[0]);
-                container.append(rowTunel);
+                //container.append(rowTunel);
                 container.append(rows[1]);
                 flotChart.append(container);
                 panelBody.append(flotChart);
